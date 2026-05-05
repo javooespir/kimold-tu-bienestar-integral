@@ -85,9 +85,9 @@ const Index = () => {
               rehabilitación de lesiones y atención 100% personalizada en Castelar.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" asChild className="bg-gradient-cta hover:opacity-90 shadow-soft text-base h-14 px-8">
+              <Button size="lg" asChild className="h-14 px-8 text-base bg-[#25D366] hover:bg-[#20BA5A] text-white">
                 <a href="https://wa.me/541178928722" target="_blank" rel="noopener">
-                  Agendar mi sesión <ChevronRight className="ml-1 h-4 w-4" />
+                  <MessageCircle className="mr-2 h-5 w-5" /> WhatsApp
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base border-2">
