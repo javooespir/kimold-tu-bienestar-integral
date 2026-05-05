@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import logo from "@/assets/kimold-logo.png";
-import hero from "@/assets/hero-rehab.jpg";
+import hero from "@/assets/kimold-2.png";
+import heroAlt1 from "@/assets/kimold-1.png";
+import heroAlt2 from "@/assets/kimold-3.png";
 import {
   Activity, Dumbbell, HeartPulse, Stethoscope, Bone, Sparkles,
   MapPin, Phone, Clock, Instagram, Star, ChevronRight, ShieldCheck, Users, Trophy
@@ -98,13 +100,25 @@ const Index = () => {
           </div>
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-cta rounded-[2rem] blur-2xl opacity-30" />
-            <img
-              src={hero}
-              alt="Kinesiólogo realizando rehabilitación de rodilla en Kimold"
-              width={1536}
-              height={1024}
-              className="relative rounded-[2rem] shadow-soft w-full h-auto object-cover aspect-[4/3]"
-            />
+            <div className="relative grid grid-cols-5 grid-rows-6 gap-3 h-[520px]">
+              <img
+                src={hero}
+                alt="Kinesiólogo de Kimold realizando tratamiento personalizado"
+                className="col-span-3 row-span-6 rounded-[2rem] shadow-soft w-full h-full object-cover"
+              />
+              <img
+                src={heroAlt1}
+                alt="Sesión de movilidad y rehabilitación en Kimold"
+                loading="lazy"
+                className="col-span-2 row-span-3 rounded-[1.5rem] shadow-soft w-full h-full object-cover"
+              />
+              <img
+                src={heroAlt2}
+                alt="Entrenamiento funcional y readaptación deportiva"
+                loading="lazy"
+                className="col-span-2 row-span-3 rounded-[1.5rem] shadow-soft w-full h-full object-cover"
+              />
+            </div>
             <Card className="absolute -bottom-6 -left-6 p-5 shadow-soft border-0 hidden sm:block">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-gradient-cta flex items-center justify-center">
