@@ -6,7 +6,7 @@ import heroAlt1 from "@/assets/kimold-1.png";
 import heroAlt2 from "@/assets/kimold-3.png";
 import {
   Activity, Dumbbell, HeartPulse, Stethoscope, Bone, Sparkles,
-  MapPin, Phone, Clock, Instagram, Star, ChevronRight, ShieldCheck, Users, Trophy
+  MapPin, Phone, Clock, Instagram, Star, ChevronRight, ShieldCheck, Users, Trophy, MessageCircle
 } from "lucide-react";
 
 const services = [
@@ -235,6 +235,51 @@ const Index = () => {
               </div>
             </Card>
           ))}
+        </div>
+      </section>
+      {/* AGENDA */}
+      <section id="agenda" className="py-24 container">
+        <div className="text-center max-w-2xl mx-auto mb-16 space-y-4">
+          <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold">Horarios</div>
+          <h2 className="text-4xl lg:text-5xl font-extrabold">Agendá tu sesión</h2>
+          <p className="text-muted-foreground text-lg">
+            Contamos con turnos disponibles según tu tratamiento. Selecciona el que mejor se adapte a vos.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {[
+            { title: "Sesiones de Rehabilitación", times: ["Lunes a Viernes: 14:00 - 18:00 hs", "Sábados: 09:00 - 13:00 hs"] },
+            { title: "Kinesiología Deportiva", times: ["Lunes a Viernes: 17:00 - 21:00 hs", "Sábados: 14:00 - 18:00 hs"] },
+            { title: "Terapia Manual", times: ["Lunes a Viernes: 14:00 - 20:00 hs", "Sábados: 10:00 - 14:00 hs"] },
+            { title: "Evaluación Postural", times: ["Previa cita", "Disponibilidad semanal"] },
+          ].map((slot) => (
+            <Card key={slot.title} className="p-8 shadow-card hover:shadow-soft transition-shadow">
+              <h3 className="text-xl font-bold mb-4">{slot.title}</h3>
+              <div className="space-y-3 mb-6">
+                {slot.times.map((time, i) => (
+                  <div key={i} className="flex items-center gap-3 text-muted-foreground">
+                    <Clock className="w-4 h-4 text-primary" />
+                    <span>{time}</span>
+                  </div>
+                ))}
+              </div>
+              <Button asChild variant="outline" className="w-full">
+                <a href="https://wa.me/541178928722" target="_blank" rel="noopener">
+                  Agendar
+                </a>
+              </Button>
+            </Card>
+          ))}
+        </div>
+        <div className="text-center mt-12 p-8 rounded-2xl bg-primary/5 border border-primary/20">
+          <p className="text-lg font-semibold text-foreground mb-2">¿Necesitas una cita especial?</p>
+          <p className="text-muted-foreground mb-6">Contáctanos directamente a través de WhatsApp para consultas especiales</p>
+          <Button asChild className="bg-gradient-cta hover:opacity-90 h-12 px-6">
+            <a href="https://wa.me/541178928722" target="_blank" rel="noopener">
+              <MessageCircle className="mr-2 h-5 w-5" />
+              Consultar por WhatsApp
+            </a>
+          </Button>
         </div>
       </section>
 
