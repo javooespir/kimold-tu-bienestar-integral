@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import logo from "@/assets/kimold-logo.png";
-import hero from "@/assets/hero-rehab.jpg";
+import hero from "@/assets/kimold-2.png";
+import heroAlt1 from "@/assets/kimold-1.png";
+import heroAlt2 from "@/assets/kimold-3.png";
 import {
   Activity, Dumbbell, HeartPulse, Stethoscope, Bone, Sparkles,
   MapPin, Phone, Clock, Instagram, Star, ChevronRight, ShieldCheck, Users, Trophy
